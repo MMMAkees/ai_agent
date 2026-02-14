@@ -12,8 +12,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="/src/output.css">
+    <link rel="icon" sizes="32x32" href="/src/assets/image.png">
     <title>AI Agent</title>
+    <link rel="stylesheet" href="/src/output.css">
 </head>
 
 <body>
@@ -22,37 +23,51 @@
         class="sticky top-0 z-50 backdrop-blur-xl bg-gradient-to-br from-[#0b0b2b] via-[#14143c] to-[#1a1446] border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex items-center justify-between h-16">
-
                 <!-- Logo -->
                 <div class="flex items-center gap-3">
                     <div
                         class="w-10 h-10 flex items-center justify-center rounded-xl backdrop-blur-md bg-white/10 border border-white/20 text-white text-lg shadow-md">
                         <i class="fa-solid fa-brain"></i>
                     </div>
-                    <h1 class="font-semibold text-lg text-white">
-                        AI Agents
-                    </h1>
+                    <h1 class="font-semibold text-lg text-white">AI Agents</h1>
                 </div>
-
-                <!-- Navigation -->
+                <!-- Desktop Navigation -->
                 <nav class="hidden md:block">
                     <ul class="flex items-center gap-8 font-medium text-sm">
-                        <li><a href="#" class="text-white/70 hover:text-white transition">Agents</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition">Frameworks</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition">Use Cases</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition">Tutorials</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition">Tools</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition">Research</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition">Blog</a></li>
+                        <li><a href="#home" class="text-white/70 hover:text-white">Home</a></li>
+                        <li><a href="#frameworks" class="text-white/70 hover:text-white">Frameworks</a></li>
+                        <li><a href="#usecases" class="text-white/70 hover:text-white">Use Cases</a></li>
+                        <li><a href="#tutorials" class="text-white/70 hover:text-white">Tutorials</a></li>
+                        <li><a href="#tools" class="text-white/70 hover:text-white">Tools</a></li>
+                        <li><a href="#research" class="text-white/70 hover:text-white">Research</a></li>
+                        <li><a href="#blog" class="text-white/70 hover:text-white">Blog</a></li>
                     </ul>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button id="menuBtn" class="md:hidden text-white text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
             </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-[#0b0b2b]/95 backdrop-blur-xl border-t border-white/10">
+
+            <ul class="flex flex-col text-center py-6 space-y-5 font-medium">
+                <li><a href="#home" class="text-white/80 hover:text-white">Home</a></li>
+                <li><a href="#frameworks" class="text-white/80 hover:text-white">Frameworks</a></li>
+                <li><a href="#usecases" class="text-white/80 hover:text-white">Use Cases</a></li>
+                <li><a href="#tutorials" class="text-white/80 hover:text-white">Tutorials</a></li>
+                <li><a href="#tools" class="text-white/80 hover:text-white">Tools</a></li>
+                <li><a href="#research" class="text-white/80 hover:text-white">Research</a></li>
+                <li><a href="#blog" class="text-white/80 hover:text-white">Blog</a></li>
+            </ul>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="bg-gradient-to-br from-[#0b0b2b] via-[#14143c] to-[#1a1446] text-white">
+        <section class="bg-gradient-to-br from-[#0b0b2b] via-[#14143c] to-[#1a1446] py-10 text-white" id="home">
             <div class="max-w-7xl mx-auto px-5 py-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <!-- Hero Left -->
@@ -74,15 +89,15 @@
 
                         <!-- Buttons -->
                         <div class="flex flex-wrap gap-4 mb-10">
-                            <button
+                            <a href="#tutorials"
                                 class="px-6 py-3 rounded-xl bg-sky-500 text-white font-semibold hover:bg-sky-400 transition cursor-pointer">
                                 Start Learning
-                            </button>
+                            </a>
 
-                            <button
+                            <a href="#blog"
                                 class="px-6 py-3 rounded-xl border border-white/20 text-white font-semibold hover:bg-white/10 transition cursor-pointer">
                                 Browse Articles
-                            </button>
+                            </a>
                         </div>
                     </div>
 
@@ -100,7 +115,7 @@
             </div>
         </section>
         <!-- Frameworks -->
-        <section class="bg-[#0b0b2b] text-white py-20">
+        <section class="bg-[#0b0b2b] text-white py-20" id="frameworks">
             <div class="max-w-7xl mx-auto px-6">
 
                 <!-- Section Header -->
@@ -175,7 +190,7 @@
             </div>
         </section>
         <!-- Use Cases -->
-        <section class="bg-gradient-to-b from-[#0b0b2b] to-[#07071a] text-white py-24">
+        <section class="bg-gradient-to-b from-[#0b0b2b] to-[#07071a] text-white py-24" id="usecases">
             <div class="max-w-7xl mx-auto px-6">
 
                 <!-- Section Header -->
@@ -269,7 +284,7 @@
             </div>
         </section>
         <!-- Tutorials -->
-        <section class="bg-[#07071a] text-white py-24">
+        <section class="bg-[#07071a] text-white py-24" id="tutorials">
             <div class="max-w-7xl mx-auto px-6">
 
                 <!-- Section Header -->
@@ -366,7 +381,7 @@
             </div>
         </section>
         <!-- Tools & Resources -->
-        <section class="bg-gradient-to-b from-[#07071a] to-[#0b0b2b] text-white py-24">
+        <section class="bg-gradient-to-b from-[#07071a] to-[#0b0b2b] text-white py-24" id="tools">
             <div class="max-w-7xl mx-auto px-6">
 
                 <!-- Section Header -->
@@ -484,7 +499,7 @@
             </div>
         </section>
         <!-- Research & Trends -->
-        <section class="bg-[#0b0b2b] text-white py-24">
+        <section class="bg-[#0b0b2b] text-white py-24" id="research">
             <div class="max-w-7xl mx-auto px-6">
 
                 <!-- Section Header -->
@@ -499,7 +514,7 @@
 
                     <p class="text-white/70 max-w-2xl mx-auto">
                         Stay updated with the newest research, trends and breakthroughs in AI agents.
-                        Discover what’s changing in agent frameworks, autonomy, safety and real-world adoption.
+                        Discover what's changing in agent frameworks, autonomy, safety and real-world adoption.
                     </p>
                 </div>
 
@@ -593,12 +608,224 @@
 
             </div>
         </section>
-        
+        <!-- Latest Blog Posts -->
+        <section class="bg-[#07071a] text-white py-24" id="blog">
+            <div class="max-w-7xl mx-auto px-6">
 
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span class="text-sm text-blue-400 font-semibold tracking-widest">
+                        LATEST ARTICLES
+                    </span>
+
+                    <h2 class="text-4xl lg:text-5xl font-bold mt-4 mb-6">
+                        Latest from the Blog
+                    </h2>
+
+                    <p class="text-white/70 max-w-2xl mx-auto">
+                        Explore the newest tutorials, guides and insights about AI agents.
+                    </p>
+                </div>
+
+                <!-- Featured Article -->
+                <div class="bg-white/5 border border-white/10 rounded-3xl overflow-hidden mb-16">
+                    <div class="grid lg:grid-cols-2">
+
+                        <img src="/src/assets/blog-featured.png" alt="featured" class="w-full h-full object-cover">
+
+                        <div class="p-10 flex flex-col justify-center">
+                            <p class="text-blue-400 text-sm mb-3">FEATURED ARTICLE</p>
+                            <h3 class="text-3xl font-bold mb-4">
+                                The Rise of Autonomous AI Agents in 2026
+                            </h3>
+                            <p class="text-white/70 mb-6">
+                                Explore how AI agents are moving beyond chatbots and becoming autonomous
+                                digital workers capable of planning, reasoning and executing real tasks.
+                            </p>
+                            <a href="autonomousAI.html"
+                                class="w-fit px-6 py-3 bg-blue-600 rounded-full font-semibold hover:bg-blue-500 transition">
+                                Read Article →
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Blog Cards -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <div
+                        class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition">
+                        <img src="/src/assets/blog1.png" class="h-48 w-full object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-3">LangChain vs CrewAI</h3>
+                            <p class="text-white/70 mb-4">
+                                Compare the two most popular AI agent frameworks and learn which one to choose.
+                            </p>
+                            <a href="LangChain-CrewAI.html" class="text-blue-400 text-sm">Read more →</a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition">
+                        <img src="/src/assets/blog2.png" class="h-48 w-full object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-3">Build an AI Research Agent</h3>
+                            <p class="text-white/70 mb-4">
+                                Step-by-step guide to building an agent that researches and writes reports.
+                            </p>
+                            <a href="Research-Agent.html" class="text-blue-400 text-sm">Read more →</a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition">
+                        <img src="/src/assets/blog3.png" class="h-48 w-full object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-3">What is RAG?</h3>
+                            <p class="text-white/70 mb-4">
+                                Learn how Retrieval Augmented Generation gives AI agents long-term memory.
+                            </p>
+                            <a href="rag.html" class="text-blue-400 text-sm">Read more →</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- CTA -->
+                <div class="text-center mt-16">
+                    <button class="px-8 py-3 bg-blue-600 rounded-full font-semibold hover:bg-blue-500 transition">
+                        View All Articles
+                    </button>
+                </div>
+
+            </div>
+        </section>
     </main>
-    <footer>
+    <!-- Footer -->
+    <footer class="relative bg-[#050514] text-white pt-20 pb-10 border-t border-white/10">
+        <!-- Glow line -->
+        <div class="absolute top-0 left-0 w-full h-px 
+          bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-70"></div>
 
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Top Footer -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 flex items-center justify-center rounded-xl 
+                                            backdrop-blur-md bg-white/10 border border-white/20 
+                                            text-white text-lg shadow-md">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">AI Agents</h3>
+                    </div>
+
+                    <p class="text-white/60 leading-relaxed">
+                        Learn how to build, use and deploy AI agents with tutorials, tools, research and real-world
+                        examples.
+                    </p>
+                </div>
+
+                <!-- Learn -->
+                <div>
+                    <h4 class="font-semibold mb-4">Learn</h4>
+                    <ul class="space-y-3 text-white/60">
+                        <li><a href="#agents" class="hover:text-white transition">Agents</a></li>
+                        <li><a href="#frameworks" class="hover:text-white transition">Frameworks</a></li>
+                        <li><a href="#usecases" class="hover:text-white transition">Use Cases</a></li>
+                        <li><a href="#tutorials" class="hover:text-white transition">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-3 text-white/60">
+                        <li><a href="#tools" class="hover:text-white transition">Tools</a></li>
+                        <li><a href="#research" class="hover:text-white transition">Research</a></li>
+                        <li><a href="#blog" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#latest" class="hover:text-white transition">Latest Posts</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect -->
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+
+                    <!-- Social Icons -->
+                    <div class="flex items-center gap-3 mb-6">
+
+                        <a href="https://www.facebook.com/mohamedakee15/" target="_blank"
+                            class="w-10 h-10 rounded-full bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white/20 transition">
+                            <i class="fa-brands fa-facebook-f text-white/80"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/mohamedakees/" target="_blank"
+                            class="w-10 h-10 rounded-full bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white/20 transition">
+                            <i class="fa-brands fa-instagram text-white/80"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/mohamed-akees/" target="_blank"
+                            class="w-10 h-10 rounded-full bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white/20 transition">
+                            <i class="fa-brands fa-linkedin-in text-white/80"></i>
+                        </a>
+
+                        <a href="mailto:akeesak15@gmail.com"
+                            class="w-10 h-10 rounded-full bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white/20 transition">
+                            <i class="fa-solid fa-envelope text-white/80"></i>
+                        </a>
+
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="flex items-center gap-3 mb-3 text-white/70">
+                        <i class="fa-solid fa-phone text-blue-400"></i>
+                        <p class="m-0">+94 77 183 2725</p>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="flex items-center gap-3 text-white/70">
+                        <i class="fa-solid fa-envelope text-blue-400"></i>
+                        <p class="m-0">akeesak15@gmail.com</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Footer -->
+            <div
+                class="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-white/50 text-sm">
+                <p>© 2026 AI Agents. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-white transition">Privacy</a>
+                    <a href="#" class="hover:text-white transition">Terms</a>
+                </div>
+            </div>
+
+        </div>
     </footer>
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        // Toggle menu
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        // Auto close when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+
+        mobileLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+            });
+        });
+    </script>
 </body>
 
 </html>

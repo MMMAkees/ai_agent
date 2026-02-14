@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build an AI Research Agent: Step-by-Step Guide</title>
+    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="icon" sizes="32x32" href="/src/assets/image.png">
+    <title>AI Agent</title>
+</head>
+
+<body class="bg-[#07071a] text-white">
+
+    <!-- Top Navigation -->
+    <header class="sticky top-0 z-50 backdrop-blur-xl 
+  bg-gradient-to-br from-[#0b0b2b] via-[#14143c] to-[#1a1446] border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/10 border border-white/20">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+                <h1 class="font-semibold text-lg">AI Agents</h1>
+            </div>
+
+            <a href="index.html#blog" class="text-white/70 hover:text-white transition">
+                ← Back to Blog
+            </a>
+        </div>
+    </header>
+
+    <!-- Article -->
+    <article class="max-w-4xl mx-auto px-6 py-16">
+
+        <p class="text-blue-400 text-sm mb-3">Tutorial • Project</p>
+
+        <h1 class="text-4xl lg:text-5xl font-bold mb-6">
+            Build an AI Research Agent
+        </h1>
+
+        <p class="text-white/60 mb-8">Step-by-step guide to building an agent that researches and writes reports • 12
+            min read</p>
+
+        <img src="/src/assets/blog2.png" alt="Build an AI Research Agent"
+            class="rounded-2xl border border-white/10 mb-12 w-full" />
+
+        <!-- Intro -->
+        <p class="text-white/70 leading-relaxed mb-6">
+            A research agent is one of the most useful AI agent projects you can build. Instead of manually searching,
+            reading and summarizing content, the agent can do it for you: it collects sources, extracts key points,
+            then generates a structured report.
+        </p>
+
+        <p class="text-white/70 leading-relaxed mb-10">
+            In this tutorial, you will build a simple “Research → Summarize → Report” agent workflow.
+            This guide focuses on the agent design and steps, so you can implement it in any framework
+            (LangChain, CrewAI, AutoGen or even a custom script).
+        </p>
+
+        <!-- What you will build -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">What You Will Build</h2>
+        <ul class="list-disc pl-6 text-white/70 space-y-2 mb-10">
+            <li>A user enters a topic (example: “Agentic AI tools in 2026”)</li>
+            <li>The agent searches and collects sources</li>
+            <li>The agent summarizes the content</li>
+            <li>The agent writes a final report (with sections + bullet points)</li>
+        </ul>
+
+        <!-- Architecture -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">Agent Architecture (Simple)</h2>
+
+        <div class="grid sm:grid-cols-2 gap-6 mb-10">
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                <h3 class="text-xl font-semibold mb-2">Agent 1: Researcher</h3>
+                <p class="text-white/70">
+                    Finds sources, extracts important info, keeps notes.
+                </p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                <h3 class="text-xl font-semibold mb-2">Agent 2: Writer</h3>
+                <p class="text-white/70">
+                    Converts notes into a structured report with headings and summaries.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step-by-step -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">Step-by-Step Build</h2>
+
+        <!-- Step 1 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 mb-6">
+            <h3 class="text-xl font-semibold mb-2">Step 1 — Define the Input & Output</h3>
+            <p class="text-white/70 mb-4">
+                Decide what the user will provide and what the agent must produce.
+            </p>
+            <ul class="list-disc pl-6 text-white/70 space-y-2">
+                <li><span class="text-white font-semibold">Input:</span> topic + optional keywords</li>
+                <li><span class="text-white font-semibold">Output:</span> report with sections (Overview, Key Findings,
+                    Tools, Risks, Conclusion)</li>
+            </ul>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 mb-6">
+            <h3 class="text-xl font-semibold mb-2">Step 2 — Add a Search Tool</h3>
+            <p class="text-white/70 mb-4">
+                Your researcher agent needs a tool to find sources. This could be:
+            </p>
+            <ul class="list-disc pl-6 text-white/70 space-y-2">
+                <li>Web search API</li>
+                <li>RSS feeds / curated links</li>
+                <li>Your own knowledge base (documents)</li>
+            </ul>
+            <p class="text-white/70 mt-4">
+                Collect at least <span class="text-white font-semibold">5–10 sources</span> for a strong report.
+            </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 mb-6">
+            <h3 class="text-xl font-semibold mb-2">Step 3 — Extract Notes (Don’t Copy-Paste)</h3>
+            <p class="text-white/70 mb-4">
+                After gathering sources, the agent should extract key points into notes.
+                Notes should be short and factual.
+            </p>
+            <ul class="list-disc pl-6 text-white/70 space-y-2">
+                <li>Keep 3–6 bullet points per source</li>
+                <li>Store the source title + link for reference</li>
+                <li>Remove repeated info</li>
+            </ul>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 mb-6">
+            <h3 class="text-xl font-semibold mb-2">Step 4 — Summarize & Organize</h3>
+            <p class="text-white/70 mb-4">
+                Next, the agent groups notes into themes. Example themes:
+            </p>
+            <ul class="list-disc pl-6 text-white/70 space-y-2">
+                <li>Current trends</li>
+                <li>Top tools and frameworks</li>
+                <li>Best practices</li>
+                <li>Risks and limitations</li>
+            </ul>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 mb-6">
+            <h3 class="text-xl font-semibold mb-2">Step 5 — Generate the Final Report</h3>
+            <p class="text-white/70 mb-4">
+                Your writer agent should output a clean, readable report. Use this format:
+            </p>
+            <ul class="list-disc pl-6 text-white/70 space-y-2">
+                <li><span class="text-white font-semibold">Overview</span></li>
+                <li><span class="text-white font-semibold">Key Findings</span></li>
+                <li><span class="text-white font-semibold">Tools / Frameworks</span></li>
+                <li><span class="text-white font-semibold">Challenges & Risks</span></li>
+                <li><span class="text-white font-semibold">Conclusion + Next Steps</span></li>
+            </ul>
+        </div>
+
+        <!-- Bonus -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">Bonus Upgrades (Make It Pro)</h2>
+        <ul class="list-disc pl-6 text-white/70 space-y-2 mb-10">
+            <li><span class="text-white font-semibold">Add citations:</span> include links for every major claim</li>
+            <li><span class="text-white font-semibold">Add memory:</span> store user topics and past reports</li>
+            <li><span class="text-white font-semibold">Add quality check:</span> reviewer agent verifies facts</li>
+            <li><span class="text-white font-semibold">Export:</span> generate PDF or DOCX report</li>
+        </ul>
+
+        <!-- Conclusion -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">Final Thoughts</h2>
+        <p class="text-white/70 leading-relaxed mb-10">
+            A research agent is a perfect portfolio project because it demonstrates real-world automation.
+            Once you have the basic workflow working, you can enhance it with memory, citations and multi-agent review.
+        </p>
+
+        <!-- Bottom CTA -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
+            <h3 class="text-2xl font-bold mb-4">Next tutorial?</h3>
+            <p class="text-white/70 mb-6">
+                Learn how RAG gives your agents long-term memory and better answers.
+            </p>
+            <a href="index.html#blog"
+                class="inline-block px-6 py-3 bg-blue-600 rounded-full font-semibold hover:bg-blue-500 transition">
+                Back to Latest Posts
+            </a>
+        </div>
+
+    </article>
+
+</body>
+
+</html>

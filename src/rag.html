@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What is RAG? How AI Agents Get Long-Term Memory</title>
+    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="icon" sizes="32x32" href="/src/assets/image.png">
+    <title>AI Agent</title>
+</head>
+
+<body class="bg-[#07071a] text-white">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-xl 
+bg-gradient-to-br from-[#0b0b2b] via-[#14143c] to-[#1a1446] border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/10 border border-white/20">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+                <h1 class="font-semibold text-lg">AI Agents</h1>
+            </div>
+
+            <a href="index.html#blog" class="text-white/70 hover:text-white">
+                ← Back to Blog
+            </a>
+        </div>
+    </header>
+
+    <!-- Article -->
+    <article class="max-w-4xl mx-auto px-6 py-16">
+
+        <p class="text-blue-400 text-sm mb-3">AI Concepts • Beginner Guide</p>
+
+        <h1 class="text-4xl lg:text-5xl font-bold mb-6">
+            What is RAG? How AI Agents Get Long-Term Memory
+        </h1>
+
+        <p class="text-white/60 mb-8">10 min read • Updated 2026</p>
+
+        <img src="/src/assets/blog3.png" class="rounded-2xl border border-white/10 mb-12 w-full">
+
+        <!-- Intro -->
+        <p class="text-white/70 leading-relaxed mb-6">
+            One of the biggest limitations of AI models is memory.
+            By default, large language models do not remember your documents,
+            your company data or past conversations.
+        </p>
+
+        <p class="text-white/70 leading-relaxed mb-10">
+            That’s where <span class="text-white font-semibold">RAG (Retrieval Augmented Generation)</span> comes in.
+            RAG gives AI agents the ability to search knowledge before answering,
+            making responses accurate, personalized and up-to-date.
+        </p>
+
+        <!-- Problem -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">
+            The Problem Without RAG
+        </h2>
+
+        <ul class="list-disc pl-6 text-white/70 space-y-2 mb-10">
+            <li>AI only knows training data</li>
+            <li>Cannot access private documents</li>
+            <li>Cannot remember company knowledge</li>
+            <li>Can hallucinate incorrect answers</li>
+        </ul>
+
+        <p class="text-white/70 mb-10">
+            Without RAG, AI is smart — but forgetful.
+        </p>
+
+        <!-- What is RAG -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">
+            What is Retrieval Augmented Generation?
+        </h2>
+
+        <p class="text-white/70 leading-relaxed mb-6">
+            RAG is a technique where AI retrieves relevant information from a knowledge base
+            before generating a response.
+        </p>
+
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8 mb-10">
+            <h3 class="text-xl font-semibold mb-4">Simple Explanation</h3>
+            <ol class="list-decimal pl-6 text-white/70 space-y-2">
+                <li>User asks a question</li>
+                <li>AI searches a knowledge database</li>
+                <li>Relevant documents are retrieved</li>
+                <li>AI generates an answer using those documents</li>
+            </ol>
+        </div>
+
+        <!-- Why Important -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">
+            Why RAG is Essential for AI Agents
+        </h2>
+
+        <div class="space-y-6 mb-10">
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                <h3 class="text-xl font-semibold mb-2">📚 Long-Term Memory</h3>
+                <p class="text-white/70">
+                    Agents can remember documents, PDFs, websites and databases.
+                </p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                <h3 class="text-xl font-semibold mb-2">🎯 Accurate Answers</h3>
+                <p class="text-white/70">
+                    AI answers using real data instead of guessing.
+                </p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                <h3 class="text-xl font-semibold mb-2">🔒 Private Knowledge</h3>
+                <p class="text-white/70">
+                    Companies can use internal data safely.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- How it works -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">
+            How RAG Works (Under the Hood)
+        </h2>
+
+        <ol class="list-decimal pl-6 text-white/70 space-y-3 mb-10">
+            <li>Documents are converted into embeddings</li>
+            <li>Stored inside a vector database</li>
+            <li>User question converted into embedding</li>
+            <li>System finds similar documents</li>
+            <li>LLM generates final answer using context</li>
+        </ol>
+
+        <!-- Tools -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">
+            Tools Used for RAG
+        </h2>
+
+        <ul class="list-disc pl-6 text-white/70 space-y-2 mb-10">
+            <li>Vector Databases: Pinecone, Weaviate, Chroma</li>
+            <li>Frameworks: LangChain, LlamaIndex</li>
+            <li>Embedding Models: OpenAI, HuggingFace</li>
+        </ul>
+
+        <!-- Use cases -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">
+            Real-World Use Cases
+        </h2>
+
+        <ul class="list-disc pl-6 text-white/70 space-y-2 mb-10">
+            <li>Customer support knowledge bots</li>
+            <li>Company document assistants</li>
+            <li>Legal & research assistants</li>
+            <li>Personal AI knowledge bases</li>
+        </ul>
+
+        <!-- Conclusion -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">
+            Final Thoughts
+        </h2>
+
+        <p class="text-white/70 mb-10">
+            RAG is the foundation of modern AI agents.
+            Without RAG, agents cannot remember.
+            With RAG, agents become powerful knowledge workers.
+        </p>
+
+        <!-- CTA -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
+            <h3 class="text-2xl font-bold mb-4">Continue Learning</h3>
+            <p class="text-white/70 mb-6">
+                Explore more AI agent tutorials and guides.
+            </p>
+            <a href="/index.html#blog" class="px-6 py-3 bg-blue-600 rounded-full font-semibold hover:bg-blue-500">
+                Back to Latest Posts
+            </a>
+        </div>
+
+    </article>
+
+</body>
+
+</html>
